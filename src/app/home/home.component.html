@@ -1,0 +1,44 @@
+<div class="search-bar">
+  <input
+    type="text"
+    placeholder="Search In Menu"
+    [(ngModel)]="searchTerm"
+    (input)="filterMenuItems()"
+  />
+</div>
+
+<div class="menu">
+  <div *ngFor="let item of filteredMenuItems; let i = index" class="menu-item">
+    <div class="menu-item-details">
+      <h2>
+        <span
+          style="color: rgb(49, 207, 76)"
+          *ngIf="cartService.getQuantityByItem(item) != 0"
+        >
+          x{{ cartService.getQuantityByItem(item) }}
+        </span>
+        {{ item.title }}
+      </h2>
+      <p>{{ item.description }}</p>
+      <button (click)="addToCart(item)" class="add-to-cart-button">
+        <!-- <mat-icon>add_shopping_cart</mat-icon> -->
+        {{ item.price }}
+      </button>
+    </div>
+    <img
+      [src]="'assets/' + item.image"
+      alt="{{ item.title }}"
+      class="menu-item-image"
+    />
+  </div>
+</div>
+
+<div class="total-section" routerLink="/cart-review">
+  <p style="text-align: left; margin-left: 7px">
+    {{ cartService.getTotalItems() }}
+  </p>
+  <p style="text-align: center">Review Order</p>
+  <p style="text-align: right; margin-right: 7px">
+    $ {{ cartService.getTotalPrice() }}
+  </p>
+</div>

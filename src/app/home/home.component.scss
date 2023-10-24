@@ -1,0 +1,134 @@
+$light-green: rgb(95, 226, 152);
+$lighter-green: rgb(136, 239, 181);
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+h2 {
+  font-size: 18px;
+  margin: 0;
+  flex-basis: 100%;
+}
+
+p {
+  font-size: 14px;
+  flex-basis: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
+  background-color: #f0f0f0;
+  // height: 100vw;
+}
+
+.menu-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // align-items: flex-start;
+  background-color: rgb(234, 228, 228);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+.menu-item-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.menu-item-details {
+  flex: 1;
+  padding: 10px;
+}
+
+.menu-item-details h2 {
+  margin: 0;
+}
+
+.search-bar {
+  margin-top: 20px;
+  width: 27vw;
+  margin-left: 1vw;
+  text-align: center;
+
+  @media screen and (max-width: 992px) {
+    width: 100vw;
+    margin-left: 0;
+  }
+}
+
+.search-bar input {
+  padding: 5px;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.add-to-cart-button {
+  background-color: $light-green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin: 10px;
+  outline: none;
+}
+
+.add-to-cart-button:hover {
+  background-color: $lighter-green;
+}
+
+.total-section {
+  width: 30vw;
+  margin-left: 2.5%;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $light-green;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 1;
+  @media screen and (max-width: 992px) {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+}
+
+.total-section p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.total-section button {
+  background-color: $light-green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin: 10px;
+  outline: none;
+}
+
+.total-section button:hover {
+  background-color: $lighter-green;
+}

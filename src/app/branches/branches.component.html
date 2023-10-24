@@ -1,0 +1,12 @@
+<div class="branches">
+  <ul>
+    <li *ngFor="let branch of branches">
+      <h3>{{ branch.title }}</h3>
+      <p>{{ branch.address }}</p>
+      <p>Phone: {{ branch.number }}</p>
+      <button (click)="openGoogleMaps(branch.coordinates)">
+        <mat-icon>room</mat-icon>Navigate
+      </button>
+    </li>
+  </ul>
+</div>

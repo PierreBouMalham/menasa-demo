@@ -1,0 +1,49 @@
+$light-green: rgb(95, 226, 152);
+$lighter-green: rgb(136, 239, 181);
+
+.branches {
+  height: 65vh;
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    button {
+      background-color: $light-green;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-top: 10px;
+      outline: none;
+
+      &:hover {
+        background-color: $lighter-green;
+      }
+    }
+  }
+}
